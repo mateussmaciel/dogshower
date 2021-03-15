@@ -3,32 +3,27 @@ package com.doshower.DogShower.model;
 import lombok.Getter;
 import lombok.Setter;
 
-import javax.persistence.*;
-import java.io.Serializable;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 import java.time.LocalDate;
 
-@Entity
 @Getter
 @Setter
-@Table(name ="Client")
-public class client implements Serializable {
+@Entity
+@Table(name ="client")
+public class client {
 
-    @Id
     private Long id;
     private String nameClient;
-    private LocalDate birthdayClient;
+    private String emailClient;
+    @Id
     private String cpfClient;
     private String rgClient;
+    private LocalDate birthdayClient;
     private String addressClient;
+    private String stateClient;
+    private String cityClient;
 
-    client(){};
-    public client(String nameClient, LocalDate birthdayClient,
-                  String cpfClient, String rgClient, String addressClient){
-        this.nameClient = nameClient;
-        this.birthdayClient = birthdayClient;
-        this.cpfClient = cpfClient;
-        this.rgClient = rgClient;
-        this.addressClient = addressClient;
-    }
-
+    client(){}
 }

@@ -4,10 +4,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class ServiceController {
+public class StatusController {
 
-    @GetMapping("/service")
-    public String GetServices(){
-        return "Retorna serviços oferecidos para os cliente";
+    @GetMapping("/status")
+    public String GetStatus(){
+        return "Consulta status do serviço solicitado pelo cliente";
     }
 }
